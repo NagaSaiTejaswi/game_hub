@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Hunt Challenge</title>
+    <link rel="stylesheet" href="style.css"> 
+<body>
+    <header>
+        <h1>Welcome to The Game Hub!</h1>
+        <p>Find the hidden words in the grid!</p>
+        <a href="homePage.html" id="back-button">
+            <button>← Back to Home</button>
+        </a>
+    </header>
+
+    <main>
+        <section id="game-container" class="game-wordhunt">
+            <h1>🔍 Word Hunt</h1>
+            
+            <div id="game-controls">
+                <label for="grid-size-select">Grid Size:</label>
+                <select id="grid-size-select">
+                    <option value="8">8x8 (Easy)</option>
+                    <option value="10" selected>10x10 (Medium)</option>
+                    <option value="12">12x12 (Hard)</option>
+                </select>
+                    <p id="timer">Time Left:03:00</p> 
+                <button id="new-puzzle-button">New Puzzle</button>
+            </div>
+            
+            <div class="hunt-wrapper">
+                <div id="word-grid">
+                    </div>
+
+                <div id="word-list-container">
+                    <h2>Words to Find: (<span id="words-found-count">0</span> / <span id="total-words-count">0</span>)</h2>
+                    <ul id="word-list">
+                        </ul>
+                </div>
+            </div>
+            
+            <p id="message" class="feedback"></p>
+        </section>
+        
+        <p id="instructions">Click and drag or click sequentially on adjacent letters (horizontal, vertical, or diagonal) to form a word.</p>
+
+        <script src="wordHunt.js"></script>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Game Hub</p>
+    </footer>
+</body>
+</html>

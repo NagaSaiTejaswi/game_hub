@@ -1,0 +1,428 @@
+
+/* Position the Back Button */
+#back-button {
+    position: absolute; /* Takes it out of the normal flow */
+    bottom: 20px; /* Adjust vertical position */
+    right: 20px; /* Places it on the right side */
+    z-index: 10; /* Ensures it's above other elements if necessary */
+}
+
+/* Basic button styling */
+#back-button button {
+    padding: 8px 15px;
+    background-color: #3498db; /* Example color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Ensure the game content is centered and takes up a good portion of the screen */
+#game-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+    /*box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);*/
+    text-align: center;
+    width: 90%;
+    max-width: 550px;
+    margin: 40px auto;
+
+}
+
+#game-container h1 {
+    color: #3498db; /* Blue theme for numbers */
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+#game-container button {
+    padding: 10px 20px;
+    margin: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* --- Display Word Style --- */
+.display-word {
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 7px;
+    margin: 30px 0;
+    color: #1a73e8; /* Google Blue */
+    text-transform: uppercase;
+}
+
+/* --- Input and Buttons (Keep these or adjust colors) --- */
+#guess-input {
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.1em;
+    transition: border-color 0.3s ease; /* Smooth transition for the color change */
+}
+
+/*#guess-input {
+    padding: 12px;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.5em;
+}*/
+
+#guess-input:focus{
+    border-color: #28a745;
+    outline: none;
+}
+
+/*#submit-button {
+    background-color: #2ecc71;  Green for submit 
+    color: white;
+}
+
+#submit-button:hover {
+    background-color: #27ae60;
+}*/
+
+#submit-button {
+    background-color: #28a745;
+    color: white;
+}
+
+#submit-button:hover {
+    background-color: #218838;
+}
+
+#new-word-button {
+    background-color: #6c757d;
+    color: white;
+}
+
+#new-word-button:hover {
+    background-color: #5a6268;
+}
+
+/* --- Game Controls (Difficulty & Timer) --- */
+/*#game-controls {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}*/
+
+#game-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/*#game-controls {
+    display: flex;
+    justify-content: center;  Space out the difficulty and timer 
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 0.95em;
+}*/
+
+/* --- Difficulty Selector Style --- */
+#difficulty-select {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/*#difficulty-select {
+    padding: 8px 10px;
+    border: 2px solid #1a73e8;  Blue border 
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    color: #343a40;
+    cursor: pointer;
+    font-weight: 600;
+    ------Remove default system styling for a cleaner look 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}*/
+
+#difficulty-select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.3); /* Blue focus ring */
+}
+
+
+/* --- Timer Style --- */
+#timer {
+    font-weight: bold;
+    color: #e74c3c;  Red color for urgency 
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+
+/*#timer {
+    font-weight: bold;
+    font-size: 1em;  Slightly larger than surrounding text 
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #ffc107;  Yellow background for urgency 
+    color: #343a40;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}*/
+
+/* Style for score */
+#score{
+    font-size: 1.1em;
+    margin: 5px 0;
+    color: #2980b9;
+}
+/*#score {
+    font-size: 1.3em;
+    color: #2980b9;
+}*/
+
+/* --- Pattern Display Area --- */
+#number-pattern {
+    min-height: 50px; /* Reserves space even when empty */
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #ecf0f1; /* Light gray background */
+    border-radius: 8px;
+    font-size: 2.5em;
+    font-family: monospace; /* Monospaced font for number alignment */
+    letter-spacing: 5px;
+    font-weight: bold;
+    color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the placeholder '__' differently if needed */
+#number-pattern p {
+    margin: 0;
+}
+
+#new-puzzle-button {
+    background-color: #95a5a6; /* Neutral color for reset */
+    color: white;
+}
+
+#new-puzzle-button:hover {
+    background-color: #7f8c8d;
+}
+
+/* --- Feedback and Score --- */
+/*#message {
+    min-height: 20px;
+    margin: 20px 0 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+}*/
+
+/* Style the disabled input/button when timer runs out */
+#guess-input:disabled, #submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* --- Sudoku Grid Layout --- */
+#sudoku-grid {
+    display: grid;
+    /* Grid template properties are now set inline by JavaScript based on N */
+    width: 90%; 
+    max-width: 500px;
+    margin: 20px auto;
+    border: 3px solid #000; /* Outer border for the entire board */
+    aspect-ratio: 1 / 1; /* Ensures the grid is always square */
+}
+
+
+/* --- Individual Cell Styling (The 81 squares) --- */
+/*.cell {
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    background-color: #fff;
+    transition: background-color 0.1s;
+}*/
+
+.cell {
+    border: 1px solid #bdc3c7; /* Lighter color for thin lines */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.1s;
+    color: #2c3e50;
+}
+
+/* Reset any previous thick borders */
+.cell {
+    border-right-width: 1px;
+    border-right-color: #ddd;
+    border-top-width: 1px;
+    border-top-color: #ddd;
+}
+.cell {
+    background-color: #f8f8f8; /* Very light gray/off-white */
+}
+
+/* ========================================================= */
+/* --- DYNAMIC BORDER RULES (Added by JS to #sudoku-grid) ---*/
+/* ========================================================= */
+
+.cell:nth-child(n) {
+    /* (r, c) => (floor(r/K) + floor(c/K)) % 2 == 1 */
+    /* This calculation is typically done in JS for dynamic K, but we can target specific sizes here: */
+    
+    /* 9x9 (3x3 boxes): Color changes every 3 rows/cols */
+    &.grid-9x9:nth-child(n) {
+        /* Rows 0-2, 6-8 AND Cols 3-5 OR Rows 3-5 AND Cols 0-2, 6-8 */
+        /* This is very complex with pure CSS. The simpler approach is targeting */
+        /* cells based on their row and column index *calculated and added as a class by JS*. */
+        
+        /* For simplified pure CSS: target rows and columns */
+        /* This rule is an approximation and works better when applied via JS. */
+    }
+}
+
+.grid-9x9 .cell:nth-child(9n + 3), /* Thick right border every 3rd column */
+.grid-9x9 .cell:nth-child(9n + 6) {
+    border-right-width: 3px;
+    border-right-color: #000;
+}
+.grid-9x9 .cell:nth-child(n + 19), /* Thick top border starting row 3 */
+.grid-9x9 .cell:nth-child(n + 37), /* Thick top border starting row 6 */
+.grid-9x9 .cell:nth-child(n + 55),
+.grid-9x9 .cell:nth-child(n + 73) {
+    border-top-width: 3px;
+    border-top-color: #000;
+}
+
+/* Revert color for 3x3 diagonal blocks (e.g., box 5) */
+.grid-9x9 .cell:nth-child(n + 28):nth-child(-n + 54):nth-child(3n + 1):nth-child(-n + 3):not(:nth-child(9n)),
+.grid-9x9 .cell:nth-child(n + 28):nth-child(-n + 54):nth-child(3n + 4):nth-child(-n + 6):not(:nth-child(9n)),
+.grid-9x9 .cell:nth-child(n + 28):nth-child(-n + 54):nth-child(3n + 7):nth-child(-n + 9):not(:nth-child(9n)) {
+    background-color: #f8f8f8;
+}
+
+
+/* --- N=6 (Medium Difficulty) - 2x3 Boxes --- */
+/* Thick right border every 3rd column */
+.grid-6x6 .cell:nth-child(6n + 3) {
+    border-right-width: 3px;
+    border-right-color: #000;
+}
+/* Thick top border every 2nd row */
+.grid-6x6 .cell:nth-child(n + 7), 
+.grid-6x6 .cell:nth-child(n + 19),
+.grid-6x6 .cell:nth-child(n + 31) {
+    border-top-width: 3px;
+    border-top-color: #000;
+}
+
+/* --- N=3 (Easy Difficulty) - No internal box division --- */
+.grid-3x3 .cell {
+    /* All internal borders remain thin and light gray */
+    border-right-width: 1px;
+    border-top-width: 1px;
+}
+.grid-3x3 .cell:nth-child(n) {
+    background-color: #f8f8f8; /* All one color */
+}
+
+
+
+/* --- Cell States --- */
+/* For cells that start with a number (cannot be changed) */
+.initial {
+    background-color: #e0e0e0;
+    font-weight: bold;
+    color: #2c3e50;
+    cursor: default;
+}
+
+
+/* When a cell is selected by the user */
+.selected {
+    background-color: #ffeaa7 !important; /* Highlight yellow */
+}
+
+.error {
+    background-color: #fce4ec; /* Light red background for errors */
+    color: #c51162; /* Darker red text */
+}
+
+/* --- New Hint Error Class --- */
+.hint-error {
+    background-color: #ffcccc !important; /* Lighter shade of red for a temporary hint */
+    color: #c51162; 
+    border: 2px dashed #c51162 !important; /* Make it look like a temporary check */
+}
+
+/* --- Number Pad Styling --- */
+#number-pad {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30
+}
+
+/* --- Action Buttons --- */
+#action-buttons button {
+    padding: 10px 20px;
+    margin: 15px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #3498db;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+#action-buttons button:hover {
+    background-color: #2980b9;
+}
+
+/* Highlight color for the active number pad button */
+.pad-selected {
+    background-color: #f39c12 !important; /* Orange/Gold color for selection */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+}
+
+/* Ensure hover styles still work for unselected buttons */
+.pad-button:hover:not(.pad-selected) {
+    background-color: #43a047;
+}
+
+.pad-button.clear:hover:not(.pad-selected) {
+    background-color: #c0392b;
+}

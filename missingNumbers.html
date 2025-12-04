@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Jumble Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="wordJumbling.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to The Game Hub!</h1>
+        <p>Your one-stop destination for brain-teasing fun.</p>
+        <a href="homePage.html" id="back-button">
+            <button>← Back to Home</button>
+        </a>
+    </header>
+    <main>
+      <section id="game-container">
+            <h1>🔢 Missing Numbers Game</h1>
+
+            <div id="game-controls">
+                <label for="difficulty-select">Difficulty:</label>
+                <select id="difficulty-select">
+                    <option value="easy">Easy (Sequences)</option>
+                    <option value="medium" selected>Medium (Simple Arithmetic)</option>
+                    <option value="hard">Hard (Complex Patterns)</option>
+                </select>
+            </div>
+            <p id="timer">Time Left: 45s</p> 
+
+            <div id="number-pattern" class="display-pattern">
+                <p>Click 'New Puzzle' to start!</p>
+            </div>
+
+            <input type="number" id="guess-input" placeholder="Enter the missing number">
+
+            <button id="submit-button">Submit Answer</button>
+            <button id="new-puzzle-button">New Puzzle</button>
+
+            <p id="message" class="feedback"></p>
+            <p id="score">Score: 0</p>
+        </section>
+        
+        <script src="missingNumbers.js"></script>  
+    </main>
+    <footer>
+        <p>&copy; 2025 The Game Hub</p>
+    </footer>
+</body>
+</html>

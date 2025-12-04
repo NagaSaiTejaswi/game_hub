@@ -1,0 +1,116 @@
+/* --- 2048 Specific Styles --- */
+
+#game-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #faf8ef; /* Light background for the game area */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#new-game-button {
+    background-color: #8f7a66; /* Brownish color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s;
+}
+
+#new-game-button:hover {
+    background-color: #9c8e7e;
+}
+
+/* --- The Main 2048 Board --- */
+#board {
+    width: 480px; /* Example fixed size (4 tiles * 100px + 5 margins * 16px) */
+    height: 480px;
+    background-color: #bbada0; /* Darker background for the grid area */
+    border-radius: 6px;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 16px;
+}
+
+/* --- Individual Cell (Empty Slot) --- */
+.cell {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(238, 228, 218, 0.35); /* Very light gray/transparent */
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Tile Styling (The actual numbers) --- */
+.tile {
+    /* Inherit dimensions from .cell but use position absolute for animation */
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 35px;
+    color: #776e65; /* Default text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s ease; /* For movement animation (CSS animations are complex) */
+}
+
+/* --- Tile Color and Text Styles --- */
+/* You will add classes dynamically (e.g., tile-2, tile-4) */
+
+.tile-2 { background-color: #eee4da; color: #776e65; font-size: 40px; }
+.tile-4 { background-color: #ede0c8; color: #776e65; font-size: 40px; }
+.tile-8 { background-color: #f2b179; color: #f9f6f2; font-size: 40px; }
+.tile-16 { background-color: #f59563; color: #f9f6f2; font-size: 35px; }
+.tile-32 { background-color: #f67c5f; color: #f9f6f2; font-size: 35px; }
+.tile-64 { background-color: #f65e3e; color: #f9f6f2; font-size: 35px; }
+
+/* Larger numbers get smaller font size */
+.tile-128 { background-color: #edcf72; color: #f9f6f2; font-size: 30px; }
+.tile-256 { background-color: #edcc61; color: #f9f6f2; font-size: 30px; }
+.tile-512 { background-color: #edc850; color: #f9f6f2; font-size: 30px; }
+.tile-1024 { background-color: #edc53f; color: #f9f6f2; font-size: 25px; }
+.tile-2048 { background-color: #edc22e; color: #f9f6f2; font-size: 25px; }
+
+/* For numbers beyond 2048 (optional) */
+.tile-super { background-color: #3c3a32; color: #f9f6f2; font-size: 20px; }
+
+
+#instructions {
+    text-align: center;
+    margin-top: 20px;
+    color: #8f7a66;
+}
+
+/* Responsive adjustments */
+@media (max-width: 550px) {
+    #board {
+        width: 90vw;
+        height: 90vw;
+        max-width: 450px;
+        max-height: 450px;
+        padding: 10px;
+        gap: 10px;
+    }
+    .tile {
+        font-size: 25px;
+    }
+}

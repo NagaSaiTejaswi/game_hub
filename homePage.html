@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Game Hub - Play Now!</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .game-card {
+            /* Inherited from style.css: background, shadow, padding */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+        .game-card a {
+            text-decoration: none;
+            color: inherit;
+            display: block; 
+            flex-grow: 1; 
+        }
+        .game-card:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+        }
+        .card-footer {
+            margin-top: 15px;
+        }
+        .card-footer button {
+            width: 100%;
+            background-color: #2ecc71; /* Green color for the play button */
+            color: white;
+            font-size: 1.1em;
+        }
+        .card-footer button:hover {
+            background-color: #27ae60;
+        }
+
+        /* --- COMING SOON STYLES --- */
+        .coming-soon-badge {
+            font-size: 0.7em;
+            background-color: #f39c12; /* Orange/Yellow background */
+            color: white;
+            padding: 3px 6px;
+            border-radius: 4px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .game-card.disabled-card {
+            opacity: 0.8;
+            cursor: default;
+        }
+        /* Disable hover effects for coming soon cards */
+        .game-card.disabled-card:hover {
+            transform: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Standard shadow */
+        }
+        /* Style for the disabled button */
+        .card-footer .disabled-button {
+            width: 100%;
+            background-color: #95a5a6; /* Gray background */
+            color: #ecf0f1;
+            font-size: 1.1em;
+            cursor: default;
+        }
+        .card-footer .disabled-button:hover {
+            background-color: #95a5a6; /* No change on hover */
+        }
+        
+        /* Ensure main uses flex properties to lay out cards */
+        main {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎮 The Ultimate Game Hub 🕹️</h1>
+        <p>A collection of classic puzzles, brain teasers, and quick challenges built just for you!</p>
+    </header>
+
+    <main>
+        <div class="game-card">
+            <a href="wordJumbling.html">
+                <h2>🔠 Word Jumble</h2>
+                <p>Unscramble the letters to guess the hidden word. Test your vocabulary!</p>
+            </a>
+            <div class="card-footer">
+                <a href="wordJumbling.html"><button>Play Jumble</button></a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <a href="missingNumbers.html">
+                <h2>❓ Missing Numbers</h2>
+                <p>Find the missing number in the sequence. A simple arithmetic challenge.</p>
+            </a>
+            <div class="card-footer">
+                <a href="missingNumbers.html"><button>Play Missing Numbers</button></a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <a href="sudoku.html">
+                <h2>🔢 Sudoku Challenge</h2>
+                <p>Sharpen your logic skills! Solve the classic number placement puzzle.</p>
+            </a>
+            <div class="card-footer">
+                <a href="sudoku.html"><button>Play Sudoku</button></a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <a href="game2048.html">
+                <h2>🔲 2048 Puzzle</h2>
+                <p>Merge tiles to reach the mighty 2048. A quick and addictive number slide!</p>
+            </a>
+            <div class="card-footer">
+                <a href="game2048.html"><button>Play 2048</button></a>
+            </div>
+        </div>
+        
+        <div class="game-card">
+            <a href="wordHunt.html">
+                <h2>🔎 Word Hunt</h2>
+                <p>Find all the hidden words in the grid before the time runs out.</p>
+            </a>
+            <div class="card-footer">
+                <a href="wordHunt.html"><button>Play Word Hunt</button></a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <a href="flashCard.html"> 
+                <h2>🧠 Memory Match</h2>
+                <p>Flip and match pairs of cards. A classic test of short-term memory.</p>
+            </a>
+            <div class="card-footer">
+                <a href="flashCard.html"><button>Play Match</button></a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <a href="hangman.html"> 
+                <h2>💀 Hangman</h2>
+                <p>Guess the hidden word one letter at a time before the stick figure is complete.</p>
+            </a>
+            <div class="card-footer">
+                <a href="hangman.html"><button>Play Hangman</button></a>
+            </div>
+        </div>
+
+        <div class="game-card disabled-card">
+            <a href="#"> 
+                <h2>💥 Whack-a-Mole <span class="coming-soon-badge">Coming Soon</span></h2>
+                <p>Test your speed and reflexes! Click the popping targets before they disappear.</p>
+            </a>
+            <div class="card-footer">
+                <a href="#"><button class="disabled-button">Coming Soon</button></a>
+            </div>
+        </div>
+        
+        <div class="game-card disabled-card">
+            <a href="#"> 
+                <h2>🖼️ Nonogram (Picross) <span class="coming-soon-badge">Coming Soon</span></h2>
+                <p>Fill the grid using numerical clues to reveal a hidden pixel image.</p>
+            </a>
+            <div class="card-footer">
+                <a href="#"><button class="disabled-button">Coming Soon</button></a>
+            </div>
+        </div>
+
+        <div class="game-card disabled-card">
+            <a href="#"> 
+                <h2>🗼 Towers of Hanoi <span class="coming-soon-badge">Coming Soon</span></h2>
+                <p>Move the disks between the rods using logic and minimal moves.</p>
+            </a>
+            <div class="card-footer">
+                <a href="#"><button class="disabled-button">Coming Soon</button></a>
+            </div>
+        </div>
+        
+        <div class="game-card disabled-card">
+            <a href="#">
+                <h2>❌⭕ Tic-Tac-Toe <span class="coming-soon-badge">Coming Soon</span></h2>
+                <p>The classic paper-and-pencil game. Try to get three in a row!</p>
+            </a>
+            <div class="card-footer">
+                <a href="#"><button class="disabled-button">Coming Soon</button></a>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <p>&copy; 2025 The Game Hub</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Challenge</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="wordJumbling.css"> 
+</head>
+<body>
+    <header>
+        <h1>Welcome to The Game Hub!</h1>
+        <p>Your one-stop destination for brain-teasing fun.</p>
+        
+        <a href="homePage.html" id="back-button">
+            <button>← Back to Home</button>
+        </a>
+    </header>
+
+    <main>
+        <section id="game-container">
+            <h1>🔢 Sudoku Game</h1>
+
+            <div id="game-controls">
+                <label for="difficulty-select">Difficulty:</label>
+                <select id="difficulty-select">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <p id="timer">Time Elapsed: 0s</p> 
+            </div>
+
+            <div id="sudoku-grid">
+                </div>
+
+            <div id="number-pad">
+                <div class="pad-button" data-value="1">1</div>
+                <div class="pad-button" data-value="2">2</div>
+                <div class="pad-button" data-value="3">3</div>
+                <div class="pad-button" data-value="4">4</div>
+                <div class="pad-button" data-value="5">5</div>
+                <div class="pad-button" data-value="6">6</div>
+                <div class="pad-button" data-value="7">7</div>
+                <div class="pad-button" data-value="8">8</div>
+                <div class="pad-button" data-value="9">9</div>
+                <div class="pad-button clear" data-value="0">Clear</div>
+            </div>
+
+            <div id="action-buttons">
+                <button id="check-button">Check Solution</button>
+                <button id="new-game-button">New Game</button>
+            </div>
+
+            <p id="message" class="feedback"></p>
+            <p id="mistakes">Mistakes: 0 / 3</p>
+        </section>
+        
+        <script src="sudoku.js"></script>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Game Hub</p>
+    </footer>
+</body>
+</html>

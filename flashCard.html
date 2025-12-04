@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to The Game Hub!</h1>
+        <p>Test your memory by finding matching pairs!</p>
+        <a href="homePage.html" id="back-button">
+            <button>← Back to Home</button>
+        </a>
+    </header>
+
+    <main>
+        <section id="game-container" class="game-memory">
+            <h1>🧠 Flashcard Memory</h1>
+            
+            <div id="game-controls">
+                <label for="difficulty-select">Difficulty:</label>
+                <select id="difficulty-select">
+                    <option value="6">Easy (6 pairs)</option>
+                    <option value="8" selected>Medium (8 pairs)</option>
+                    <option value="10">Hard (10 pairs)</option>
+                </select>
+                <p id="timer">Time: 00:00</p>
+                <button id="start-memory-button">Start Game</button>
+            </div>
+            
+            <div id="status-display">
+                <span>Moves: <span id="moves-count">0</span></span>
+                <span>Matches: <span id="matches-found">0</span> / <span id="total-pairs">0</span></span>
+            </div>
+
+            <div id="memory-grid">
+                </div>
+            
+            <p id="message" class="feedback"></p>
+
+        </section>
+        
+        <script src="flashCard.js"></script>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Game Hub</p>
+    </footer>
+</body>
+</html>

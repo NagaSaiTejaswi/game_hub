@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Jumble Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to The Game Hub!</h1>
+        <p>Your one-stop destination for brain-teasing fun.</p>
+        <a href="homePage.html" id="back-button">
+            <button>← Back to Home</button>
+        </a>
+    </header>
+    <main>
+        <section id="game-container" class="game-jumbling"> 
+            <h1>🧠 Word Jumble Game</h1>
+
+            <div id="game-controls">
+                <label for="difficulty-select">Difficulty:</label>
+                <select id="difficulty-select">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <p id="timer">Time Left: 30s</p> 
+        
+            <p id="scrambled-word" class="display-word">Click 'New Word' to start!</p> 
+
+            <p id="hint-display" class="feedback"></p>
+
+            <input type="text" id="guess-input" placeholder="Enter your guess here" autocomplete="off">
+        
+            <div id="action-buttons">
+                <button id="submit-button">Submit Guess</button>
+                <button id="hint-button">Get Hint</button> 
+                <button id="new-word-button">New Word</button>
+            </div>
+
+            <p id="message" class="feedback"></p>
+            <p id="score-display">Score: <span id="score">0</span></p> 
+        </section>
+        
+        <script src="wordJumbling.js"></script>
+    </main>
+    <footer>
+        <p>&copy; 2025 The Game Hub</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+    <header>
+        <h1>Welcome to The Game Hub!</h1>
+        <p>Merge tiles to reach 2048!</p>
+        <a href="homePage.html" id="back-button">
+            <button>← Back to Home</button>
+        </a>
+    </header>
+
+    <main id="game-2048">
+        <section id="game-container" class="game-2048">
+            <h1>🔢 2048</h1>
+            
+            <div id="game-info">
+                <p>Score: <span id="score">0</span></p>
+                <button id="new-game-button">New Game</button>
+            </div>
+            
+            <div id="board">
+                </div>
+
+            <p id="message" class="feedback"></p>
+        </section>
+        
+        <p id="instructions">Use the **Arrow Keys** (← ↑ → ↓) to move the tiles.</p>
+
+        <script src="game2048.js"></script>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Game Hub</p>
+    </footer>
+</body>
+</html>

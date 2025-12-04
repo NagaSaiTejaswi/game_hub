@@ -1,0 +1,124 @@
+/* --- Word Hunt Specific Styles --- */
+
+#game-container {
+    max-width: 900px; /* Wider container to hold grid and list side-by-side */
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for the Grid and the Word List */
+.hunt-wrapper {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows stacking on smaller screens */
+}
+
+/* --- Word Grid Styling --- */
+#word-grid {
+    display: grid;
+    /* grid-template-columns will be set by JS based on size */
+    width: 450px; /* Fixed size for a 10x10 example */
+    height: 450px;
+    border: 3px solid #3498db;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.grid-cell {
+    border: 1px solid #ecf0f1; /* Light gray lines between letters */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    user-select: none;
+    color: #333;
+    transition: background-color 0.1s;
+}
+
+/* --- Selection Feedback States --- */
+
+/* Highlight currently selected path */
+.selected {
+    background-color: #ffeaa7; /* Soft yellow for current selection */
+    color: #333;
+}
+
+/* Highlight cells belonging to a FOUND word */
+.found {
+    background-color: #2ecc71 !important; /* Green for found words */
+    color: white;
+    font-weight: 800;
+}
+
+/* --- Word List Styling --- */
+#word-list-container {
+    width: 250px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#word-list-container h2 {
+    color: #3498db;
+    margin-top: 0;
+    font-size: 1.2em;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+}
+
+#word-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-height: 400px; /* Limit height for scrolling */
+    overflow-y: auto;
+}
+
+#word-list li {
+    padding: 5px 0;
+    font-size: 1.1em;
+    color: #7f8c8d;
+    transition: color 0.3s;
+}
+
+/* Style for found words in the list */
+#word-list li.found-word {
+    color: #2ecc71; /* Green */
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hunt-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    #word-grid, #word-list-container {
+        width: 90%;
+        max-width: 450px;
+    }
+}
+
+#word-grid, 
+#word-grid .grid-cell {
+    /* Explicitly re-enable pointer events for the grid elements */
+    pointer-events: auto !important;
+}
+
+/* --- Timer Style --- */
+#timer {
+    font-weight: bold;
+    color: #e74c3c;  Red color for urgency 
+    margin: 15px 0;
+    font-size: 1.2em;
+}
